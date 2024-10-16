@@ -15,7 +15,7 @@ if __name__ == '__main__':
             except NotUniqueError:
                 print(f"Автор вже існує {el.get('fullname')}")
 
-    with open('qoutes.json', encoding='utf-8') as fd:
+    with open('quotes.json', encoding='utf-8') as fd:
         data = json.load(fd)
         for el in data:
             author, *_ = Author.objects(fullname=el.get('author'))
